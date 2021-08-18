@@ -6,3 +6,11 @@ def greedy_policy(Q, s):
 
     return np.random.choice(greedy_actions)
 
+
+def ep_greedy_policy(Q, s, ep):
+    explore = np.random.choice([1, 0], p=[ep, 1 - ep])
+    if explore:
+        return np.random.choice(np.arange(len(Q[s])))
+    else:
+        return greedy_policy(Q, s)
+
