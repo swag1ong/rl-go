@@ -9,7 +9,7 @@ class MC(AlgorithmBase):
     """
     first visit on-policy MC
     """
-    def __init__(self, gamma=0.99, num_ep=1000, epsilon=0.05):
+    def __init__(self, gamma=0.99, num_ep=1000, epsilon=0.2):
         self.gamma = gamma
         self.num_ep = num_ep
         self.epsilon = epsilon
